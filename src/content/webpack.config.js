@@ -8,7 +8,7 @@ module.exports = {
 
   output: {
     filename: 'content.js',
-    path: path.join(__dirname, '../', 'build'),
+    path: path.join(__dirname, '../../', 'build'),
     publicPath: '/'
   },
 
@@ -23,9 +23,8 @@ module.exports = {
         test: /\.(jsx|js)?$/,
         loader: 'babel-loader',
         exclude: /(node_modules)/,
-        include: path.join(__dirname, 'src'),
         query: {
-          presets: ['es2015', 'react']
+          presets: ['es2015', 'stage-1', 'react']
         }
       }
     ]
